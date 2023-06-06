@@ -301,10 +301,25 @@ private final int DEFAULT_TIME_OUT=5;
 	}
 	//****************************------Wait-----******************//
 	
-	public WebElement waitForElementVisible(By locator, int timeout)
-	{
-		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(timeout));
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//	public WebElement waitForElementVisible(By locator, int timeout)
+//	{
+//		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(timeout));
+//		WebElement element= wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//		if(Boolean.parseBoolean(DriverFactory.highlightElement))
+//		{
+//			jsUtil.flash(element);
+//		}
+//		return element;
+//	}
+//	
+	
+	public WebElement waitForElementVisible(By locator, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		if(Boolean.parseBoolean(DriverFactory.highlightElement)) {
+			jsUtil.flash(element);
+		}
+		return element;
 	}
 	
 	public List<WebElement> waitForElementsVisible(By locator, int timeout)

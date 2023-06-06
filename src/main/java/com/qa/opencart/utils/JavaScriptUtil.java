@@ -19,7 +19,7 @@ public class JavaScriptUtil {
 	{
 		String bgcolor=element.getCssValue("backgroundColor");
 		
-		for(int i=0; i<15; i++)
+		for(int i=0; i<10; i++)
 		{
 			changeColor("rgb(0,200,0)",element);
 			changeColor(bgcolor,element);

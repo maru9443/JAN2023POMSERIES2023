@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import com.qa.opencart.utils.AppConstants;
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class LoginPage {
 	
 	private WebDriver driver;
@@ -32,7 +34,7 @@ public class LoginPage {
 	private By registerLink=By.linkText("Register");
 	
 	
-	
+	@Step("getting login page title........")
 	public String getLoginPageTitle() 
 	{
 		return eleUtil.waitForTitleIsAndCapture(AppConstants.LOGIN_PAGE_TITLE_VALUE, AppConstants.SHORT_DEFAULT_WAIT);
