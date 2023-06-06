@@ -47,11 +47,12 @@ public class LoginPage {
 		
 	}
 	
-	@Step("getting login page FGPWD........")
+	
 	public boolean isForgotPwdLinkExist()
 	{
 		return eleUtil.checkElementIsDisplayed(forgotPwdlink);
 	}
+	
 	
 	public List<String> getFooterLinksList()
 	{
